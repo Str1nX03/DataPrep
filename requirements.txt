@@ -3,4 +3,5 @@ numpy
 scikit-learn
 setuptools
 gunicorn
+flask
 -e .

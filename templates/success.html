@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Successful!</h2>
+        <p>Your file has been saved at:</p>
+        <code>{{ file_path }}</code>
+        <br><br>
+        <a href="{{ url_for('index') }}">Upload Another File</a>
+    </div>
+</body>
+</html>
