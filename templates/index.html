@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Preprocessing Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Data Preprocessor</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#upload">Upload</a></li>
+            <li><a href="#future">Future Plans</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="content-left">
+            <h1>Welcome to the Dataset Preprocessing Tool</h1>
+            <p>Your first step in preparing high-quality data for machine learning and data science projects.</p>
+            <a href="#upload" class="btn">Start Preprocessing</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="content-left">
+            <h2>📊 Why Data Preprocessing Matters</h2>
+            <p>Raw datasets often contain missing values, inconsistencies, and noise that can negatively impact machine learning models.</p>
+            <p>By preprocessing your data, you can:</p>
+            <ul>
+                <li>✔ Remove missing values</li>
+                <li>✔ Normalize numerical data</li>
+                <li>✔ Encode categorical variables</li>
+                <li>✔ Improve model accuracy</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section">
+        <div class="content-left">
+            <h2>🛠 How This Web App Works</h2>
+            <p>Using this tool is simple! Follow these steps:</p>
+            <ol>
+                <li>Upload your dataset (CSV format only).</li>
+                <li>Select preprocessing steps based on your requirements.</li>
+                <li>Download the processed file, ready for use in ML or data analysis.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload" class="section">
+        <div class="content-left">
+            <h2>📂 Upload Your Dataset</h2>
+            <p>Select a CSV file, choose preprocessing steps, and click "Upload & Process".</p>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="alert {{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" required><br>
+                
+                <h3>Select Preprocessing Operations:</h3>
+                <label><input type="checkbox" name="operations" value="data_structuring"> Data Structuring</label><br>
+                <label><input type="checkbox" name="operations" value="label_encoding"> Label Encoding</label><br>
+                <label><input type="checkbox" name="operations" value="onehot_encoding"> One Hot Encoding</label><br>
+                <label><input type="checkbox" name="operations" value="normalization"> Normalization</label><br>
+
+                <button type="submit">Upload & Process</button>
+            </form>
+
+            <p class="note">* Only CSV files are supported.</p>
+        </div>
+    </section>
+
+    <!-- Future Plans Section -->
+    <section id="future" class="section">
+        <div class="content-left">
+            <h2>🚀 What's Next?</h2>
+            <p>Right now, this tool is great for Beginners, Students, and Simple Datasets. But we're working on exciting upgrades!</p>
+            <h3>🔜 Upcoming Features:-</h3>
+            <ul>
+                <li>✔ Support for Excel & JSON files</li>
+                <li>✔ Advanced feature selection for ML</li>
+                <li>✔ Automated data visualization</li>
+                <li>✔ Better handling of large datasets</li>
+                <li>✔ User authentication & file history</li>
+            </ul>
+            <p>Stay tuned for updates!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Data Preprocessor | Built for Data Science Enthusiasts</p>
+    </footer>
+
+</body>
+</html>
