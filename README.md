@@ -92,6 +92,13 @@ http://127.0.0.1:5000/
 
 You can extend the codebase to connect with ML pipelines or integrate it into larger platforms.
 
+## 🔮 Future Scope
+
+- 📦 Export to .csv format
+- 📚 Support more complex and optimized data pre-processing techniques like Rescaling, Feature Encoding, Principal Component Analysis (PCA), etc
+- 🧩 Ability to test your pre processed dataset on some Machine Learning algorithms on web-application and return performance metrices
+- 🔎 Get EDA on your data with one click
+  
 ## 📬 Contact
 
 *If you want to report bugs, request features, or collaborate:*
