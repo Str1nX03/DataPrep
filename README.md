@@ -15,7 +15,7 @@ You can try the live version of DataPrep here:
 
 ## 🛠️ Tech Stack
 
-- **Backend:** Flask (Python 3.12.1)
+- **Backend:** Flask (Python 3.12.8)
 - **Frontend:** HTML, CSS
 - **Deployment:** Render
 - **Version Control:** Git & GitHub
