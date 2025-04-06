@@ -1,8 +1,14 @@
-# 🧹 DataPrep
+# 🧹 DataPrep - Automatic Data Pre-Processor
 
-**DataPrep** is a Flask-based web application that allows users to upload their datasets and apply a variety of data preprocessing techniques. It simplifies and modularizes data cleaning steps such as **Label Encoding**, **Normalization**, **One-Hot Encoding**, and **Missing Value Handling**, returning a clean, preprocessed dataset that’s ready for machine learning tasks.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.12-blue.svg)
+![Flask](https://img.shields.io/badge/flask-%5E2.3-lightgrey)
+![Status](https://img.shields.io/badge/status-Production-green)
+![Deployment](https://img.shields.io/badge/deployed%20on-Render-blue)
 
-This tool is ideal for students, data science enthusiasts, and ML beginners who want to practice with clean datasets without having to write preprocessing code from scratch.
+---
+
+> DataPrep* is a Flask-based web application that allows users to upload their datasets and apply a variety of data preprocessing techniques. It simplifies and modularizes data cleaning steps such as **Label Encoding**, **Normalization**, **One-Hot Encoding**, and **Missing Value Handling**, returning a clean, preprocessed dataset that’s ready for machine learning tasks. This tool is ideal for students, data science enthusiasts, and ML beginners who want to practice with clean datasets without having to write preprocessing code from scratch.
 
 ---
 
